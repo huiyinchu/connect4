@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>QUnit Test Suite</title>
+	<link rel="stylesheet" href="http://code.jquery.com/qunit/qunit-git.css" type="text/css" media="screen">
+	<script type="text/javascript" src="http://code.jquery.com/qunit/qunit-git.js"></script>
+	<script type='text/javascript' src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script type="text/javascript" src="../code_jquery.js"></script>
+	<script>
+		test("2players", function () {
+			equal(test.players.length, 2);
+		});
+		test("horizontalWon", function () {
+			equal(test.horizontalWon(1,2),false);
+			equal(test.horizontalWon(1,4),false);
+		});
+		test("verticalWon", function () {
+			equal(test.verticalWon(1,2),false);
+			equal(test.verticalWon(5,2),false);
+		});
+		test("diagonalLtrWon", function () {
+			equal(test.diagonalLtrWon(1,2),false);
+			equal(test.diagonalLtrWon(1,4),false);
+		});
+		test("diagonalRtlWon", function () {
+			equal(test.diagonalRtlWon(1,2),false);
+			equal(test.diagonalRtlWon(3,6),false);
+		});
+	</script>
+</head>
+<body>
+	<h1 id="qunit-header">QUnit Test Suite</h1>
+	<h2 id="qunit-banner"></h2>
+	<div id="qunit-testrunner-toolbar"></div>
+	<h2 id="qunit-userAgent"></h2>
+	<ol id="qunit-tests"></ol>
+</body>
+</html>
